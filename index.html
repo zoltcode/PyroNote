@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PyroNote — Crystalline-fast Markdown Workspace</title>
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  <style>
+    :root {
+      --app-bg: #1e1e1e;
+      --header-bg: #252526;
+      --header-border: #3c3c3c;
+      --accent-primary: #e05a00;
+      --accent-primary-hover: #c84f00;
+      --text-muted: #858585;
+      --tab-bar-bg: #1c1c1c;
+      --tab-inactive-bg: #2d2d2d;
+    }
+    body {
+      background-color: var(--app-bg);
+      color: #e3e3e3;
+    }
+  </style>
+</head>
+<body class="font-sans antialiased selection:bg-[#e05a00] selection:bg-opacity-30">
+
+  <!-- Header Navigation Panel -->
+  <header class="border-b border-[var(--header-border)] bg-[var(--header-bg)] sticky top-0 z-50">
+    <div class="max-w-5xl mx-auto px-6 h-14 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <span class="text-xl font-bold tracking-wider text-[var(--accent-primary)] select-none">PyroNote</span>
+      </div>
+      <nav class="flex items-center gap-6">
+        <a href="#features" class="text-sm font-medium text-[var(--text-muted)] hover:text-white transition-colors">Features</a>
+        <a href="#preview" class="text-sm font-medium text-[var(--text-muted)] hover:text-white transition-colors">Interface</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Marketing Panel -->
+  <section class="max-w-4xl mx-auto px-6 pt-20 pb-16 text-center">
+    <span class="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-semibold rounded-full bg-[var(--header-bg)] border border-[var(--header-border)] text-[var(--accent-primary)] mb-6 select-none">
+      🔥 Closed Alpha Phase Active
+    </span>
+    <h1 class="text-4xl md:text-5xl font-black tracking-tight text-white max-w-2xl mx-auto leading-tight">
+      Crystalline-fast Markdown workspace for privacy purists.
+    </h1>
+    <p class="mt-6 text-lg text-[var(--text-muted)] max-w-xl mx-auto leading-relaxed">
+      Built on a native C++20 engine. Zero-cloud dependency, 100% offline security, and lightning-fast performance.
+    </p>
+    <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+      <a href="https://t.me" target="_blank" class="w-full sm:w-auto px-6 py-3 bg-[var(--accent-primary)] hover:bg-[var(--accent-primary-hover)] text-white font-bold text-sm rounded shadow-lg transition-all transform active:scale-95 text-center cursor-pointer">
+        Join Closed Beta via Telegram
+      </a>
+      <a href="#features" class="w-full sm:w-auto px-6 py-3 bg-[var(--header-bg)] border border-[var(--header-border)] hover:border-zinc-500 text-white font-semibold text-sm rounded transition-colors text-center">
+        Explore Features
+      </a>
+    </div>
+  </section>
+
+  <!-- Interactive UI Mockup Section -->
+  <section id="preview" class="max-w-5xl mx-auto px-6 pb-24">
+    <div class="rounded-xl border border-[var(--header-border)] bg-[var(--header-bg)] shadow-2xl overflow-hidden flex flex-col aspect-[16/10] w-full select-none">
+
+      <!-- Mockup App Navbar -->
+      <div class="flex items-center justify-between px-4 py-2 bg-[var(--header-bg)] min-h-10 border-b border-[var(--header-border)]">
+        <div class="flex items-center gap-3">
+          <span class="text-xs font-bold tracking-wider text-white">PyroNote</span>
+          <span class="px-1.5 py-0.5 text-[9px] font-medium rounded bg-[var(--tab-inactive-bg)] border border-[var(--header-border)] text-[var(--text-muted)]">Ready</span>
+        </div>
+        <div class="w-32 h-4 bg-[var(--tab-bar-bg)] border border-[var(--header-border)] rounded-sm"></div>
+      </div>
+
+      <!-- Mockup TabBar Row -->
+      <div class="flex bg-[var(--tab-bar-bg)] h-7 w-full items-end border-b border-[var(--header-border)]">
+        <div class="flex items-center justify-between h-6 px-3 text-[11px] border-r border-[var(--header-border)] bg-[var(--app-bg)] text-white border-t-2 border-t-[var(--accent-primary)]" style="width: 120px;">
+          <span>📄 note.md</span>
+          <span class="text-[9px] text-[var(--text-muted)]">✕</span>
+        </div>
+        <div class="flex items-center justify-between h-6 px-3 text-[11px] border-r border-[var(--header-border)] bg-[var(--tab-inactive-bg)] text-[var(--text-muted)]" style="width: 120px;">
+          <span>📄 todo.md</span>
+          <span class="text-[9px] opacity-0">✕</span>
+        </div>
+        <div class="h-6 px-2.5 flex items-center justify-center text-xs font-bold text-[var(--text-muted)] border-r border-[var(--header-border)]">+</div>
+      </div>
+
+      <!-- Mockup Workspace Columns -->
+      <div class="flex-1 flex overflow-hidden w-full bg-[var(--app-bg)]">
+        <!-- Sidebar File Tree -->
+        <div class="w-44 h-full bg-[var(--tab-bar-bg)] border-r border-[var(--header-border)] flex flex-col pt-2 shrink-0">
+          <span class="px-3 py-1 text-[9px] font-bold text-[var(--text-muted)] uppercase tracking-wider">Workspace Files</span>
+          <div class="mt-1 flex flex-col gap-0.5">
+            <div class="px-3 py-1 text-xs font-semibold text-white bg-[var(--app-bg)] border-l-2 border-[var(--accent-primary)] truncate">📄 note.md</div>
+            <div class="px-3 py-1 text-xs text-[var(--text-muted)] hover:text-white truncate">📄 todo.md</div>
+            <div class="px-3 py-1 text-xs text-[var(--text-muted)] hover:text-white truncate">📄 project.md</div>
+          </div>
+        </div>
+
+        <!-- Editor Canvas CodeMirror Area -->
+        <div class="flex-1 h-full p-4 font-mono text-xs text-[#e3e3e3] text-left relative overflow-hidden">
+          <div class="flex gap-3 leading-relaxed">
+            <span class="text-[var(--text-muted)] text-right select-none w-4">1</span>
+            <span class="text-[var(--accent-primary)] font-bold"># Welcome to PyroNote</span>
+          </div>
+          <div class="flex gap-3 leading-relaxed mt-1">
+            <span class="text-[var(--text-muted)] text-right select-none w-4">2</span>
+            <span></span>
+          </div>
+          <div class="flex gap-3 leading-relaxed mt-1">
+            <span class="text-[var(--text-muted)] text-right select-none w-4">3</span>
+            <span>Start typing your thoughts in a crystalline-fast,</span>
+          </div>
+          <div class="flex gap-3 leading-relaxed mt-1">
+            <span class="text-[var(--text-muted)] text-right select-none w-4">4</span>
+            <span>hermetic local workspace. Every pixel is under control.<span class="inline-block w-1.5 h-3.5 bg-[var(--accent-primary)] ml-0.5 animate-pulse"></span></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mockup Status Bar -->
+      <div class="h-5 bg-[var(--tab-bar-bg)] border-t border-[var(--header-border)] flex items-center justify-between px-3 text-[10px] text-[var(--text-muted)]">
+        <span>Local Mode</span>
+        <span>Font Size: 16px</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Features Matrix -->
+  <section id="features" class="border-t border-[var(--header-border)] bg-[var(--header-bg)] py-20">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="p-6 rounded-lg bg-[var(--app-bg)] border border-[var(--header-border)]">
+          <div class="text-2xl text-[var(--accent-primary)] mb-4">⚡</div>
+          <h4 class="text-md font-bold text-white mb-2">Native C++20 Speed</h4>
+          <p class="text-xs text-[var(--text-muted)] leading-relaxed">No Electron framework overhead. Instant startup time and optimized memory boundaries.</p>
+        </div>
+        <div class="p-6 rounded-lg bg-[var(--app-bg)] border border-[var(--header-border)]">
+          <div class="text-2xl text-[var(--accent-primary)] mb-4">🔒</div>
+          <h4 class="text-md font-bold text-white mb-2">Hermetic Privacy</h4>
+          <p class="text-xs text-[var(--text-muted)] leading-relaxed">Local-first, zero-cloud architecture. Your personal notes remain securely locked inside your hardware.</p>
+        </div>
+        <div class="p-6 rounded-lg bg-[var(--app-bg)] border border-[var(--header-border)]">
+          <div class="text-2xl text-[var(--accent-primary)] mb-4">🎨</div>
+          <h4 class="text-md font-bold text-white mb-2">Fluid Workspace UI</h4>
+          <p class="text-xs text-[var(--text-muted)] leading-relaxed">Features fixed-width line counting scales, functional open tab rows, and debounced auto-save systems.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
