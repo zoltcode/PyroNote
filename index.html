@@ -40,20 +40,24 @@
   <!-- Marketing Panel -->
   <section class="max-w-4xl mx-auto px-6 pt-20 pb-16 text-center">
     <span class="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-semibold rounded-full bg-[var(--header-bg)] border border-[var(--header-border)] text-[var(--accent-primary)] mb-6 select-none">
-      🔥 Closed Alpha Phase Active
+      🔥 Closed Alpha Phase Active • 100% Free
     </span>
     <h1 class="text-4xl md:text-5xl font-black tracking-tight text-white max-w-2xl mx-auto leading-tight">
       Crystalline-fast Markdown workspace for privacy purists.
     </h1>
     <p class="mt-6 text-lg text-[var(--text-muted)] max-w-xl mx-auto leading-relaxed">
-      Built on a native C++20 engine. Zero-cloud dependency, 100% offline security, and lightning-fast performance.
+      Built on a native C++17 engine. Zero-cloud dependency, 100% offline security, and lightning-fast performance.
     </p>
+
+    <!-- Action Control Row -->
     <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-      <a href="https://t.me/pyronote" target="_blank" class="w-full sm:w-auto px-6 py-3 bg-[var(--accent-primary)] hover:bg-[var(--accent-primary-hover)] text-white font-bold text-sm rounded shadow-lg transition-all transform active:scale-95 text-center cursor-pointer">
-        Join Closed Beta via Telegram
+      <!-- Main Focus Action Button -->
+      <a href="https://github.com/zoltcode/PyroNote/releases" class="w-full sm:w-auto px-6 py-3 bg-[var(--accent-primary)] hover:bg-[var(--accent-primary-hover)] text-white font-bold text-sm rounded shadow-lg transition-all transform active:scale-95 text-center cursor-pointer">
+        Download v0.1.0-alpha.1
       </a>
-      <a href="#features" class="w-full sm:w-auto px-6 py-3 bg-[var(--header-bg)] border border-[var(--header-border)] hover:border-zinc-500 text-white font-semibold text-sm rounded transition-colors text-center">
-        Explore Features
+      <!-- Secondary Focus Action Button -->
+      <a href="https://t.me/pyronote" target="_blank" class="w-full sm:w-auto px-6 py-3 bg-[var(--header-bg)] border border-[var(--header-border)] hover:border-zinc-500 text-[var(--text-muted)] hover:text-white font-semibold text-sm rounded transition-colors text-center">
+        Join Telegram for News
       </a>
     </div>
   </section>
@@ -90,8 +94,9 @@
         <div class="w-44 h-full bg-[var(--tab-bar-bg)] border-r border-[var(--header-border)] flex flex-col pt-2 shrink-0">
           <span class="px-3 py-1 text-[9px] font-bold text-[var(--text-muted)] uppercase tracking-wider">Workspace Files</span>
           <div class="mt-1 flex flex-col gap-0.5">
-            <div class="px-3 py-1 text-xs font-semibold text-white bg-[var(--app-bg)] border-l-2 border-[var(--accent-primary)] truncate">📄 note.md</div>
-            <div class="px-3 py-1 text-xs text-[var(--text-muted)] hover:text-white truncate">📄 todo.md</div>
+            <div class="px-3 py-0.5 text-xs text-[var(--text-muted)] truncate">▼ 📁 Documents</div>
+            <div class="px-6 py-1 text-xs font-semibold text-white bg-[var(--app-bg)] border-l-2 border-[var(--accent-primary)] truncate">📄 note.md</div>
+            <div class="px-6 py-1 text-xs text-[var(--text-muted)] hover:text-white truncate">📄 todo.md</div>
             <div class="px-3 py-1 text-xs text-[var(--text-muted)] hover:text-white truncate">📄 project.md</div>
           </div>
         </div>
@@ -131,7 +136,7 @@
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div class="p-6 rounded-lg bg-[var(--app-bg)] border border-[var(--header-border)]">
           <div class="text-2xl text-[var(--accent-primary)] mb-4">⚡</div>
-          <h4 class="text-md font-bold text-white mb-2">Native C++20 Speed</h4>
+          <h4 class="text-md font-bold text-white mb-2">Native C++17 Speed</h4>
           <p class="text-xs text-[var(--text-muted)] leading-relaxed">No Electron framework overhead. Instant startup time and optimized memory boundaries.</p>
         </div>
         <div class="p-6 rounded-lg bg-[var(--app-bg)] border border-[var(--header-border)]">
